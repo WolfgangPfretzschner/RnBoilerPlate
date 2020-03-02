@@ -8,15 +8,7 @@ import {createFirestoreInstance} from 'redux-firestore';
 // import firebase from 'firebase/app';
 import firebase from 'app/services/firebaseService/firebaseInit';
 
-import {decode, encode} from 'base-64';
 
-if (!global.btoa) {
-  global.btoa = encode;
-}
-
-if (!global.atob) {
-  global.atob = decode;
-}
 
 const store = storeConfig();
 

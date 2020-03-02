@@ -16,7 +16,7 @@ export const increaseCounter = () => async (
   const firebase = getFirebase();
   const firestore = getFirestore();
   const user = firebase.auth().currentUser;
-  let value = getState().firestore.ordered.counter[0].count
+  let value = getState().firestore.ordered.Fart[0].count
   value = parseInt(value,10) +1
   try {
     await firestore.set(`counter/rL78Gi6TXnJpwQtLzyzN`, {count: value});
@@ -38,7 +38,7 @@ export const decreaseCounter = () => async (
   const firebase = getFirebase();
   const firestore = getFirestore();
   // const user = firebase.auth().currentUser;
-  let value = getState().firestore.ordered.counter[0].count;
+  let value = getState().firestore.ordered.Fart[0].count;
   value = parseInt(value, 10) - 1;
   try {
     await firestore.set(`counter/rL78Gi6TXnJpwQtLzyzN`, {count: value});

@@ -5,7 +5,6 @@ import thunk from 'redux-thunk';
 import {getFirebase} from 'react-redux-firebase';
 import {getFirestore, reduxFirestore} from 'redux-firestore';
 import firebase from 'app/services/firebaseService/firebaseInit';
-// import firebase from 'app/services/firebaseService/firebaseServiceConfig';
 
 const initialState = {};
 

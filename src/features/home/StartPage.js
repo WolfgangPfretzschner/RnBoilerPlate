@@ -12,21 +12,26 @@ import {
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
 import {useDispatch, useSelector} from 'react-redux';
-import {increaseCounter, decreaseCounter} from 'features/home/store/actions/counterAction';
+import {
+  increaseCounter,
+  decreaseCounter,
+} from 'features/home/store/actions/counterAction';
 import {useFirestoreConnect, isLoaded, isEmpty} from 'react-redux-firebase';
 import firebaseService from 'app/services/firebaseService';
+import SpinnerScreen from 'features/LoadingSpinner';
 
 const Counter = () => {
   useFirestoreConnect(() => [
     {
       collection: 'counter',
       doc: 'rL78Gi6TXnJpwQtLzyzN',
+      storeAs: 'Fart',
     },
   ]);
   const counter = useSelector(state => state.counterReducer.counter);
   const count = useSelector(
     ({firestore: {ordered}}) =>
-      ordered.counter && ordered.counter[0] && ordered.counter[0].count,
+      ordered.Fart && ordered.Fart[0] && ordered.Fart[0].count,
   );
 
   // const count = useSelector(state => state.firestore.ordered.count)
@@ -34,13 +39,7 @@ const Counter = () => {
   const dispatch = useDispatch();
 
   if (!isLoaded(count)) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View>
-          <ActivityIndicator size="small" style={styles.indicator} />
-        </View>
-      </SafeAreaView>
-    );
+    return <SpinnerScreen />;
   }
 
   return (
@@ -112,11 +111,6 @@ const styles = StyleSheet.create({
     color: '#007AFF',
     marginLeft: 40,
     marginRight: 40,
-  },
-  indicator: {
-    flex: 1,
-    justifyContent: 'center',
-    // alignSelf: 'center',
   },
 });
 
