@@ -9,7 +9,7 @@ import {createFirestoreInstance} from 'redux-firestore';
 import firebase from 'app/services/firebaseService/firebaseInit';
 
 
-
+ 
 const store = storeConfig();
 
 const rrfConfig = {
