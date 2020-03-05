@@ -1,16 +1,16 @@
-// import getEnvVars from '../../../../environment';
+import {firebaseConfig} from 'root/secret';
 
-// const { firebaseConfig } = getEnvVars();
+// import Firebase config data here
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDKocKrnHpHwofSxEBy9TkkZgutJN33Eig',
-  authDomain: 'ontimern-d34df.firebaseapp.com',
-  databaseURL: 'https://ontimern-d34df.firebaseio.com',
-  projectId: 'ontimern-d34df',
-  storageBucket: 'ontimern-d34df.appspot.com',
-  messagingSenderId: '303268127290',
-  appId: '1:303268127290:web:13060f81e5406c71a98b03',
-  measurementId: 'G-X9YD8CSXFC',
-};
+// const firebaseConfig = {
+//   apiKey: "XXSIzaSyADrbOF5asdfae3r3rfLBZP7Wc",
+//   authDomain: "owhatever.firebaseapp.com",
+//   databaseURL: "https://oowhateverf.firebaseio.com",
+//   projectId: "owhatever-33df",
+//   storageBucket: "owhatever-33df.appspot.com",
+//   messagingSenderId: "303268127290",
+//   appId: "1:3032331327290:web:76c9ca3a2343h0a98b03",
+//   measurementId: "G-7J4KIIF33VL"
+// };
 
 export default firebaseConfig;

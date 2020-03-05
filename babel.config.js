@@ -1,8 +1,10 @@
-const path = require("path");
+const path = require('path');
 
 const paths = {
-  assets: path.resolve(__dirname, "assets"),
-  src: path.resolve(__dirname, "src")
+  assets: path.resolve(__dirname, 'assets'),
+  src: path.resolve(__dirname, 'src'),
+  '@': path.resolve('src'),
+  root: path.resolve(''),
 };
 
 module.exports = function(api) {
@@ -11,13 +13,13 @@ module.exports = function(api) {
     presets: ['module:metro-react-native-babel-preset'],
     plugins: [
       [
-        "module-resolver",
+        'module-resolver',
         {
-          extensions: [".js", ".jsx", ".android.js", ".ios.js", ".web.js"],
-          root: ["./src"],
-          alias: paths
-        }
-      ]
-    ]
+          extensions: ['.js', '.jsx', '.android.js', '.ios.js', '.web.js'],
+          root: ['./src'],
+          alias: paths,
+        },
+      ],
+    ],
   };
 };
